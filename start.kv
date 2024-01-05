@@ -1,0 +1,32 @@
+<Login>
+    ben: benName.text
+    pw: passwort.text
+    knopf: btn
+
+    GridLayout:
+        cols: 1
+        size: root.width, root.height
+        GridLayout:
+            cols: 2
+            Label:
+                text: "Benutzername"
+                font_size: 30
+            TextInput:
+                id:benName
+                font_size: 30
+                multiline: False
+            Label:
+                text: "Passwort"
+                font_size: 30
+            TextInput:
+                password: True
+                id: passwort
+                font_size: 30
+                multiline: False
+        Button:
+            text: "anmelden"
+            font_size: 30
+            id: btn
+            size_hint: (1.,0.5)
+            on_release:
+                root.loginPopup()
